@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>Employment Application - Alexco Electric</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <nav>
+                    <div>
+                    <img class="logo" src="public/images/logo.jpg" alt="logo" />
+                    </div>
+                    <ul class="nav-bar">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/about">ABOUT US</a></li>
+                        <li><a href="/project">PROJECTS</a></li>
+                        <li><a href="/contact">CONTACT US</a></li>
+                        <li><a href="/apply">APPLY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="switch-button"">
+        <!-- Language switch button -->
+        <button id="lang-switch"><a href="/apply_es">Cambiar a Español</a></button>
+    </div>
+
+    <section id="contact">
+        <div>
+            <div class="application">
+                <h2 class="application">Employment Application</h2>
+                <p>Alexco Electric, LLC</p>
+            </div>
+            <form action="/apply-submit" method="POST" enctype="multipart/form-data">
+                <label id="name" for="name">First and Last name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                <label id="number" for="phone">Phone Number:</label>
+                <input type="phone" id="number-input" name="phone" placeholder="(956)111-1111" required>
+    
+                <label id="label" for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="JohnDoe@gmail.com" required>
+
+                <label id="label" for="position">What position are you applying for?</label>
+                <select class="form-select" id="position" name="position" required>
+                    <option disabled value="-1" selected>Make Selection</option>
+                    <option value="Shop & Warehouse Management">Shop & Warehouse Management</option>
+                    <option value="Receptionst">Receptionst</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Project Management">Project Management</option>
+                    <option value="Electrical Engineer">Electrical Engineer</option>
+                    <option value="Master Electrician">Master Electrician</option>
+                    <option value="Journeyman Electrician">Journeyman Electrician</option>
+                    <option value="Electricians Apprentice">Electricians Apprentice</option>
+                    <option value="Electricians Helper">Electricians Helper</option>
+                </select>
+
+                <label id="label" for="start">When can you start?:</label>
+                <input type="date" id="start" name="start" required>
+
+                <label id="label" for="salary">Salary Desired per-Hour:</label>
+                <input type="text" id="salary" name="salary" placeholder="$20" required>
+
+                <label id="label" for="resume">Attach a Copy of Your Resume</label>
+                <p id="pdf">Word or PDF Documents Only.</p>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                
+                <label id="label" for="message">Former Employers:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <p id="pdfv2"> Take a quick quiz </p>
+
+                <label id="label" for="q1">What color is designated for a Neutral conductor in a 120/208V system?</label>
+                <select class="form-select" id="q1" name="q1" required>
+                    <option disabled value="-1" selected>Make Selection</option>
+                    <option value="Green">Green</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Grey">Grey</option>
+                </select>
+
+                <label id="label" for="q2">What does a green wire with a yellow stripe usually represent?</label>
+                <select class="form-select" id="q2" name="q2" required>
+                    <option disabled value="-1" selected>Make Selection</option>
+                    <option value="Hot wire">Hot wire</option>
+                    <option value="Ground Wire">Ground Wire</option>
+                    <option value="Switched Leg">Switched Leg</option>
+                    <option value="Isolated Ground">Isolated Ground</option>
+                </select>
+
+                <p id="toolz">Do you have the following tools?</p>
+
+                <label for="tool_1">Linemens</label>
+                <input value="Linemens" class="form-check" type="checkbox" name="tool_1" id="tool_1">
+
+                <label for="tool_2">Needle Nose Pliers</label>
+                <input value="Needle Nose Pliers" class="form-check" type="checkbox" name="tool_2" id="tool_2">
+
+                <label for="tool_3">Screwdrivers</label>
+                <input value="Screwdrivers" class="form-check" type="checkbox" name="tool_3" id="tool_3">
+
+                <label for="tool_4">Benders (1/2", 3/4", 1")</label>
+                <input value='Benders (1/2", 3/4", 1")' class="form-check" type="checkbox" name="tool_4" id="tool_4">
+
+                <label for="tool_5">Impact Drill</label>
+                <input value="Impact Drill" class="form-check" type="checkbox" name="tool_5" id="tool_5">
+
+                <label for="tool_6">Hammer Drill</label>
+                <input value="Hammer Drill" class="form-check" type="checkbox" name="tool_6" id="tool_6">
+                
+
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alexco Electric. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

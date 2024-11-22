@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>About Us - Alexco Electric</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <nav>
+                    <div>
+                    <img class="logo" src="public/images/logo.jpg" alt="logo" />
+                    </div>
+                    <ul class="nav-bar">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/about">ABOUT US</a></li>
+                        <li><a href="/project">PROJECTS</a></li>
+                        <li><a href="/contact">CONTACT US</a></li>
+                        <li><a href="/apply">APPLY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="containerv2">Contact Us</h2>
+            <form action="/contact-submit" method="POST">
+                <label class="contact-us" for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label class="contact-us" for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label class="contact-us" for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button class="submit-button" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.7296757623835!2d-98.3100402245825!3d26.270435477035917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665a7d282e3d977%3A0xbd935a202baf76d8!2s816%20E%20Mile%204%20Rd%2C%20Palmhurst%2C%20TX%2078573!5e0!3m2!1sen!2sus!4v1732235185815!5m2!1sen!2sus" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    </section>
+
+    <footer>
+        <div class="container" class="submit">
+            <p>&copy; 2024 Alexco Electric. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="contact.php"></script>
+</body>
+</html>

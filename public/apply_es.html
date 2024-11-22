@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>Solicitud de Empleo - Alexco Electric</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <nav>
+                    <div>
+                    <img class="logo" src="public/images/logo.jpg" alt="logo" />
+                    </div>
+                    <ul class="nav-bar">
+                        <li><a href="/">INICIO</a></li>
+                        <li><a href="/about">NOSOTROS</a></li>
+                        <li><a href="/project">PROYECTOS</a></li>
+                        <li><a href="/contact">CONTÁCTENOS</a></li>
+                        <li><a href="/apply">SOLICITAR</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="switch-button">
+        <!-- Botón para cambiar de idioma -->
+        <button id="lang-switch"><a href="/apply">Cambiar a Inglés</a></button>
+    </div>
+
+    <section id="contact">
+        <div>
+            <div class="application">
+                <h2 class="application">Solicitud de Empleo</h2>
+                <p>Alexco Electric, LLC</p>
+            </div>
+            <form action="/apply-submit" method="POST" enctype="multipart/form-data">
+                <label id="name" for="name">Nombre y Apellido:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label id="number" for="phone">Número de Teléfono:</label>
+                <input type="phone" id="number-input" name="phone" required>
+    
+                <label id="label" for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label id="label" for="position">¿Para qué puesto está solicitando?</label>
+                <select class="form-select" id="position" name="position" required>
+                    <option disabled value="-1" selected>Seleccione</option>
+                    <option value="Shop & Warehouse Management">Administración de Almacén y Tienda</option>
+                    <option value="Receptionist">Recepcionista</option>
+                    <option value="Accounting">Contabilidad</option>
+                    <option value="Project Management">Gestión de Proyectos</option>
+                    <option value="Electrical Engineer">Ingeniero Eléctrico</option>
+                    <option value="Master Electrician">Electricista Maestro</option>
+                    <option value="Journeyman Electrician">Electricista de Oficio</option>
+                    <option value="Electricians Apprentice">Aprendiz de Electricista</option>
+                    <option value="Electricians Helper">Ayudante de Electricista</option>
+                </select>
+
+                <label id="label" for="start">¿Cuándo puede comenzar? (MM/DD/AAAA):</label>
+                <input type="date" id="start" name="start" required>
+
+                <label id="label" for="salary">Salario Deseado por Hora:</label>
+                <input type="text" id="salary" name="salary" required>
+
+                <label id="label" for="resume">Adjunte una Copia de Su Curriculum</label>
+                <p id="pdf">Solo Documentos en Word o PDF.</p>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                
+                <label id="label" for="message">Empleadores Anteriores:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <p id="pdfv2"> Realice un cuestionario rápido </p>
+
+                <label id="label" for="q1">¿Qué color está designado para un conductor Neutral en un sistema de 120/208V?</label>
+                <select class="form-select" id="q1" name="q1" required>
+                    <option disabled value="-1" selected>Seleccione</option>
+                    <option value="Green">Verde</option>
+                    <option value="Black">Negro</option>
+                    <option value="White">Blanco</option>
+                    <option value="Grey">Gris</option>
+                </select>
+
+                <label id="label" for="q2">¿Qué representa normalmente un cable verde con una franja amarilla?</label>
+                <select class="form-select" id="q2" name="q2" required>
+                    <option disabled value="-1" selected>Seleccione</option>
+                    <option value="Hot wire">Cable Vivo</option>
+                    <option value="Ground Wire">Cable de Tierra</option>
+                    <option value="Switched Leg">Conexión con Interruptor</option>
+                    <option value="Isolated Ground">Tierra Aislada</option>
+                </select>
+
+                <p id="toolz">¿Tiene las siguientes herramientas?</p>
+
+                <label for="tool_1">Alicates de Electricista</label>
+                <input value="Linemens" class="form-check" type="checkbox" name="tool_1" id="tool_1">
+
+                <label for="tool_2">Alicates de Punta</label>
+                <input value="Needle Nose Pliers" class="form-check" type="checkbox" name="tool_2" id="tool_2">
+
+                <label for="tool_3">Destornilladores</label>
+                <input value="Screwdrivers" class="form-check" type="checkbox" name="tool_3" id="tool_3">
+
+                <label for="tool_4">Curvadores (1/2", 3/4", 1")</label>
+                <input value='Benders (1/2", 3/4", 1")' class="form-check" type="checkbox" name="tool_4" id="tool_4">
+
+                <label for="tool_5">Taladro de Impacto</label>
+                <input value="Impact Drill" class="form-check" type="checkbox" name="tool_5" id="tool_5">
+
+                <label for="tool_6">Taladro de Percusión</label>
+                <input value="Hammer Drill" class="form-check" type="checkbox" name="tool_6" id="tool_6">
+                
+
+                <button class="submit-button" type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alexco Electric. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
